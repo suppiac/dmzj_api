@@ -2,7 +2,7 @@ package com.example.dmzj_api.utils
 
 import java.security.MessageDigest
 
-class Md5Util {
+class MD5Util {
 
     fun encrypt(content: String): String {
         val md5 = MessageDigest.getInstance("MD5")

@@ -1,22 +1,27 @@
-package com.example.dmzj_api.pojo
+package com.example.dmzj_api.entity
 
-data class NovelRecommend(
-    val category_id: Int = 0,
-    val sort: Int = 0,
-    val title: String = "",
-    val data: List<NovelRecommendData>? = null,
-)
-
-data class NovelRecommendData(
-    val id: String = "",
-    val obj_id: String = "",
+data class NovelCategory(
+    val tag_id: Int = 0,
     val title: String = "",
     val cover: String = "",
-    val url: String = "",
-    val type: Int = 0,
-    val sub_title: String = "",
-    val status: String = "",
 )
+
+data class NovelFilter(
+    val cover: String = "",
+    val name: String = "",
+    val authors: String = "",
+    val id: String = "",
+)
+
+data class NovelFilterTag(
+    val title: String = "",
+    val items: List<Item>? = null,
+) {
+    data class Item(
+        val tag_id: Int = 0,
+        val tag_name: String = "",
+    )
+}
 
 data class NovelLatest(
     val id: String = "",
@@ -49,28 +54,23 @@ data class NovelRankTag(
     val tag_name: String = "",
 )
 
-data class NovelFilter(
-    val cover: String = "",
-    val name: String = "",
-    val authors: String = "",
-    val id: String = "",
-)
-
-data class NovelFilterTag(
+data class NovelRecommend(
+    val category_id: Int = 0,
+    val sort: Int = 0,
     val title: String = "",
-    val items: List<NovelFilterItem>? = null,
-)
-
-data class NovelFilterItem(
-    val tag_id: Int = 0,
-    val tag_name: String = "",
-)
-
-data class NovelCategory(
-    val tag_id: Int = 0,
-    val title: String = "",
-    val cover: String = "",
-)
+    val data: List<Item>? = null,
+) {
+    data class Item(
+        val id: String = "",
+        val obj_id: String = "",
+        val title: String = "",
+        val cover: String = "",
+        val url: String = "",
+        val type: Int = 0,
+        val sub_title: String = "",
+        val status: String = "",
+    )
+}
 
 data class NovelSearch(
     val _biz: String = "",

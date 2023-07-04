@@ -1,11 +1,16 @@
-package com.example.dmzj_api.pojo
+package com.example.dmzj_api.entity
+
+data class NewsCategory(
+    val tag_id: Int = 0,
+    val tag_name: String = "",
+)
 
 data class NewsBanner(
     val code: Int = 0,
     val msg: String = "",
-    val data: List<NewsBannerData>? = null,
+    val data: List<Item>? = null,
 ) {
-    data class NewsBannerData (
+    data class Item(
         val id: Int = 0,
         val title: String = "",
         val pic_url: String = "",
@@ -13,8 +18,3 @@ data class NewsBanner(
         val object_url: String = "",
     )
 }
-
-data class NewsCategory(
-    val tag_id: Int = 0,
-    val tag_name: String = "",
-)

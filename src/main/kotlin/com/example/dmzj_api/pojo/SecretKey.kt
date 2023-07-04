@@ -1,3 +1,0 @@
-package com.example.dmzj_api.pojo
-
-const val novelContentKey = "IBAAKCAQEAsUAdKtXNt8cdrcTXLsaFKj9bSK1nEOAROGn2KJXlEVekcPssKUxSN8dsfba51kmHM"
